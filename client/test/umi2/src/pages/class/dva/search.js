@@ -15,7 +15,10 @@ export default class Search extends Component {
   }
 
   handleSubmit=(value)=>{
-    alert()
+    this.props.dispatch({
+      type:"search/getLists",
+      payload:this.state.value
+    })
   }
 
   render() {

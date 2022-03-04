@@ -21,7 +21,7 @@ import {connect} from 'dva'
     )
   }
 }
-
+// 函数柯里化的方式
 export default connect(({search})=>({
   search
 }))(Dva)
