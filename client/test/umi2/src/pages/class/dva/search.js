@@ -16,7 +16,7 @@ export default class Search extends Component {
 
   handleSubmit=(value)=>{
     this.props.dispatch({
-      type:"search/getLists",
+      type:"search/getListsAsync",
       payload:this.state.value
     })
   }

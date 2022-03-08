@@ -1,3 +1,4 @@
+import {getLists} from '@/services/search';
 export default{
   namespace:"search",
   state:{
@@ -17,6 +18,13 @@ export default{
 
   //异步的方法
   effects:{
-
+    *getListsAsync({payload},{call,put}){
+      // eslint-disable-next-line no-unused-vars
+      const res=yield call(getLists,payload);
+      yield put({
+        type:'getLists',
+        payload:res.lists
+      })
+    }
   }
 }
